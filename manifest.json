@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "FPL Team Stats",
+  "description": "This extension shows useful stats on their FPL team to help you pick your team.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://fantasy.premierleague.com/a/team/my*"],
+      "css": ["style.css"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
